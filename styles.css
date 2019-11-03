@@ -43,16 +43,19 @@ body {
     cursor: pointer;
 }
 
+.bookmarks-container {
+    margin: auto;
+    width: 80%;
+}
 
 .bookmarks-container h2 {
-    text-align: center;
     margin: 20px 0px auto;
     font-size: 30px;
+    display: inline;
 }
 
 .bookmarks-list-item {
     background-color: rgb(199, 168, 168);
-    width: 80%;
     margin: 20px auto;
     padding: 20px 20px;
     border-style: solid;
@@ -84,3 +87,7 @@ body {
     cursor: pointer;
 }
 
+.thank-you {
+    width: 80%;
+    text-align: center;
+}
