@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d7e6e2;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.url-form-container input {
+    display: block;
+    width: 90%;
+    height: 100px;
+    font-size: 80px;
+    background: #1a1a1a;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 80px;
+    margin:  40px  auto;
+    padding-left: 40px;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.url-form-container input::placeholder {
+    color: #c0c0c0
+}
+
+.url-form-container button {
+    display: block;
+    margin: auto;
+    background-color: #f7f7f7;
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 90px;
+    border-radius: 40px;
+}
+
+.url-form-container button:hover {
+    cursor: pointer;
+}
+
+
+.bookmarks-container h2 {
+    text-align: center;
+    margin: 20px 0px auto;
+    font-size: 30px;
+}
+
+.bookmarks-list-item {
+    background-color: rgb(199, 168, 168);
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+.bookmarks-list-item a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+}
+
+.bookmarks-list-item button {
+    float: right;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    outline: none;
+    padding: 0px 20px;
+    /* margin: 0px 10px; */
+    border-radius: 16px;
+    border-width: 2px;
+    border-color: red;
+}
+
+.bookmarks-list-item button:hover {
+    border-color: green;
+    cursor: pointer;
+}
+
