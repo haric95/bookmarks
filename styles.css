@@ -1,10 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    border-width: 0px;
 }
 
 body {
-    background-color: #d7e6e2;
+    background-color: #d0f0f0;
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
@@ -37,32 +38,48 @@ body {
     border: none;
     padding: 0px 90px;
     border-radius: 40px;
+    margin-top: 20px;
 }
 
 .url-form-container button:hover {
     cursor: pointer;
+    background-color: #e6e6e6
 }
 
 .bookmarks-container {
     margin: auto;
     width: 80%;
+    height: auto;
 }
 
 .bookmarks-container h2 {
+    font-weight: 200;
+    font-size: 28px;
     margin: 20px 0px auto;
-    font-size: 30px;
     display: inline;
+}
+.bookmarks-container .filter-input {
+    float: right;
+    font-size: 20px;
+    background: #1a1a1a;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
 }
 
 .bookmarks-list-item {
-    background-color: rgb(199, 168, 168);
     margin: 20px auto;
     padding: 20px 20px;
-    border-style: solid;
-    border-width: 3px;
     border-radius: 40px;
+    border: none;
     box-sizing: border-box;
 }
+
+
 
 .bookmarks-list-item a {
     text-decoration: none;
@@ -70,24 +87,91 @@ body {
     color: rgb(56, 56, 56);
 }
 
+.bookmarks-list-item .tag-container {
+    display: inline;    
+}
+
 .bookmarks-list-item button {
     float: right;
     font-size: 16px;
     background-color: #f7f7f7;
     outline: none;
-    padding: 0px 20px;
-    /* margin: 0px 10px; */
+    padding: 5px 20px;
+    margin: 0px 10px;
     border-radius: 16px;
-    border-width: 2px;
-    border-color: red;
+    border: none;
 }
 
+.bookmarks-list-item .tag-container button {
+    background-color: #c6ffee
+}   
+
+.bookmarks-list-item .tag-container button:hover {
+    background-color: #89ffdc
+}   
+
+
+
 .bookmarks-list-item button:hover {
-    border-color: green;
+    background-color: #f77373;
     cursor: pointer;
 }
 
-.thank-you {
+.page-button {
+    background-color: #f7f7f7;
+    display: block;
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+}
+.page-button:hover {
+    cursor: pointer;
+    background-color: #e6e6e6;
+}
+
+.submission-container {
+    margin: auto;
     width: 80%;
     text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.submission-container h2{
+    font-size: 30px;
+    font-weight: 200;
+    padding: 20px;
+}
+
+.submission-container .tag-input {
+    width: 80%;
+    height: 40px;
+    font-size: 34px;
+}
+
+.submission-container input {
+    border-radius: 40px;
+    padding: 20px 40px;
+    background: #1a1a1a;
+    color: #f8f8f8;
+    
+}
+
+.submission-container button {
+    background-color: #f7f7f7;
+    display:inline;
+    font-size: 34px;
+    text-align: center;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.submission-container button:hover {
+    background-color:#e6e6e6;
 }
