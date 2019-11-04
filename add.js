@@ -21,6 +21,8 @@ retreiveBookmarks(1);
 // defaults to whole localBookmarks object but can pass it a sorted/filtered array.
 function retreiveBookmarks(e, bookmarks = localBookmarks) {
     let page_num;
+    //When the page is first loaded, retrieve bookmarks is called with argument of 1
+    //this means the same function can be used on first load, and when page is filtered / page number is changed.
     if (e === 1) {
         page_num = 1
     } else {
@@ -28,12 +30,12 @@ function retreiveBookmarks(e, bookmarks = localBookmarks) {
     }
     //these variables are used to determine which items are pulled from localBookmarks.
     //slicing into the array means that if there are not 20 links to display, it will only display the correct number of items.
-    let start_index = (page_num-1)*20;
-    let end_index = start_index + bookmarks.slice(start_index, start_index + 20).length;
+    let startIndex = (page_num-1)*20;
+    let endIndex = startIndex + bookmarks.slice(startIndex, startIndex + 20).length;
     while (bookmarksList.hasChildNodes()) {
         bookmarksList.removeChild(bookmarksList.lastChild);
     };
-    for (let i = start_index; i < end_index; i++) {
+    for (let i = startIndex; i < endIndex; i++) {
         buildListElement(i, bookmarks[i]);
     };
     addPageNumbers(page_num, bookmarks);
@@ -163,12 +165,6 @@ function addPageNumbers(page_num, bookmarks) {
     while (pageNumContainer.hasChildNodes()) {
         pageNumContainer.removeChild(pageNumContainer.lastChild);
     };
-    backButton = document.createElement("button");
-    backButton.className ="page-button";
-    backButton.setAttribute("value", "back");
-    backButton.innerHTML = "<"
-    backButton.addEventListener("click", retreiveBookmarks)
-
     numPages = Math.ceil(bookmarks.length/20)
     for (let i = 1; i <= numPages; i++) {
         pageButton = document.createElement("button");
@@ -187,6 +183,7 @@ function addPageNumbers(page_num, bookmarks) {
 //passes the retreiveBookmarks function this filtered list of bookmarks
 function filterBookmarks() {
     tag = document.querySelector(".filter-input").value.toLowerCase();
+    console.log(tag);
     if (tag === "") {
         bookmarks = localBookmarks
     } else {
@@ -214,7 +211,7 @@ function generateTagButtons(i, bookmark) {
         tagButton.setAttribute("value", tags[i]);
         tagButton.addEventListener("click", function(e) {
             filterInput.setAttribute("value", e.target.value);
-            filterBookmarks(e.target.value);    
+            filterBookmarks(filterInput.value);    
         })
         tagContaianer.appendChild(tagButton);
     }
